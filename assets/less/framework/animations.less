@@ -1,14 +1,62 @@
-@keyframes show-detail {
+.pp-show-detail {
+  display: block;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background: @background-color;
+  z-index: 1000;
+  animation: pp-show-detail 0.25s ease-in;
+}
+.pp-show-detail-nav {
+  display: block;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background: @background-color;
+  z-index: 5000;
+  animation: pp-show-detail;
+}
+.pp-hide-detail {
+  display: block;
+  z-index:-1000;
+  opacity: 0;
+}
+.module-definition.pp-hide-this {
+  display: none;
+}
+.pp-hide-detail-show {
+  display: block;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background: @background-color;
+  z-index: 1000;
+  animation: pp-show-detail 0.3s ease-out reverse;
+}
+
+@keyframes pp-show-detail {
   0% {transform: translate3d(0,100%,0);}
 100% {transform: translate3d(0,0,0);}
 }
 
-@keyframes hide-detail {
+@keyframes pp-hide-detail {
   0% {transform: translate3d(0,0,0);}
 100% {transform: translate3d(0,100%,0);}
 }
 
-@keyframes show-def {
+@keyframes pp-show-def {
   0% {max-height: 0px; opacity: 0;}
   10% {opacity: 0;}
   100% {max-height:500px; opacity: 1;}

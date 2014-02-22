@@ -7,17 +7,17 @@ mixin module(category, type)
           span.dingbats-misc-corner-flag.mobile-share-icon
           span.dingbats-misc-rounded-check.mobile-share-icon
         div.module-icon
-          span(class=['dingbats-'+category.class, 'icon'])
+          span(class=['dingbats-'+category.class, 'pp-icon'])
         - if (type == 'share') {
-          h3.module-title.dingbats-misc-rounded-check.desktop-show= category.name
-            span.dingbats-misc-play.triangle
-          h3.module-title.mobile-title.mobile-show= category.name
-          div.module-definition.hide-this
+          h3.module-title.dingbats-misc-rounded-check.pp-desktop-show= category.name
+            span.dingbats-misc-play.pp-triangle
+          h3.module-title.mobile-title.pp-mobile-show= category.name
+          div.module-definition.pp-hide-this
             p= category.description
         - }
         - else {
-          h3.module-title.desktop-show= category.name
-          h3.module-title.mobile-title.mobile-show= category.name
+          h3.module-title.pp-desktop-show= category.name
+          h3.module-title.mobile-title.pp-mobile-show= category.name
         - }
         div.module-options-list
           ul
@@ -35,12 +35,12 @@ mixin module(category, type)
           span.dingbats-misc-corner-flag.mobile-share-icon.not-sharing
           span.dingbats-misc-rounded-x.mobile-share-icon
         div.module-icon
-          span(class=['dingbats-'+category.class, 'icon'])
+          span(class=['dingbats-'+category.class, 'pp-icon'])
         - if (type == 'share') {
-        h3.module-title.dingbats-misc-rounded-x.desktop-show= category.name
-          span.dingbats-misc-play.triangle
-        h3.module-title.mobile-title.mobile-show= category.name
-        div.module-definition.hide-this
+        h3.module-title.dingbats-misc-rounded-x.pp-desktop-show= category.name
+          span.dingbats-misc-play.pp-triangle
+        h3.module-title.mobile-title.pp-mobile-show= category.name
+        div.module-definition.pp-hide-this
           p= category.description
         - }
         div.module-options-list
@@ -55,12 +55,12 @@ mixin module(category, type)
   - }
 
 mixin mobileModuleCollect(category, type)
-  div(class=['mobileModule', category.class, 'hide-detail'])
+  div(class=['mobileModule', category.class, 'pp-hide-detail'])
     div.module-header.clearfix
       if(type == "collect")
         div.info-button-spacer
       h3.module-title= category.name
-      div.module-definition.hide-this
+      div.module-definition.pp-hide-this
         p= category.description
       div.module-close.dingbats-misc-x
     div.module-options-list
@@ -78,19 +78,19 @@ mixin mobileModuleCollect(category, type)
         each category in collected
           li
             - if (category.options.length > 0) {
-              span(class=['dingbats-'+category.class, 'shared', 'icon'], data-attr=category.class)
+              span(class=['dingbats-'+category.class, 'shared', 'pp-footer-icon'], data-attr=category.class)
             - }
             - else {
-              span(class=['dingbats-'+category.class, 'icon'], data-attr=category.class)
+              span(class=['dingbats-'+category.class, 'pp-footer-icon'], data-attr=category.class)
             - }
 
 mixin mobileModuleShare(category)
   - if (category.options.length > 0) {
-    div(class=['mobileModule', 'sharedCategory', category.class, 'hide-detail'])
+    div(class=['mobileModule', 'sharedCategory', category.class, 'pp-hide-detail'])
       div.module-header.clearfix
-        div.info-button.dingbats-misc-rounded-info
+        div.pp-info-button.dingbats-misc-rounded-info
         h3.module-title= category.name
-        div.module-definition.hide-this
+        div.module-definition.pp-hide-this
           p= category.description
         div.module-close.dingbats-misc-x
       div.module-options-list
@@ -108,18 +108,18 @@ mixin mobileModuleShare(category)
           each category in shared
             li
               - if (category.options.length > 0) {
-                span(class=['dingbats-'+category.class, 'shared', 'icon'], data-attr=category.class)
+                span(class=['dingbats-'+category.class, 'shared', 'pp-footer-icon'], data-attr=category.class)
               - }
               - else {
-                span(class=['dingbats-'+category.class, 'icon'], data-attr=category.class)
+                span(class=['dingbats-'+category.class, 'pp-footer-icon'], data-attr=category.class)
               - }
   - }
   - else {
-    div(class=['mobileModule', category.class, 'hide-detail'])
+    div(class=['mobileModule', category.class, 'pp-hide-detail'])
         div.module-header.clearfix
-          div.info-button.dingbats-misc-rounded-info
+          div.pp-info-button.dingbats-misc-rounded-info
           h3.module-title= category.name
-          div.module-definition.hide-this
+          div.module-definition.pp-hide-this
             p= category.description
           div.module-close.dingbats-misc-x
         div.module-options-list
@@ -137,14 +137,14 @@ mixin mobileModuleShare(category)
             each category in shared
               li
                 - if (category.options.length > 0) {
-                  span(class=['dingbats-'+category.class, 'shared', 'icon'], data-attr=category.class)
+                  span(class=['dingbats-'+category.class, 'shared', 'pp-footer-icon'], data-attr=category.class)
                 - }
                 - else {
-                  span(class=['dingbats-'+category.class, 'icon'], data-attr=category.class)
+                  span(class=['dingbats-'+category.class, 'pp-footer-icon'], data-attr=category.class)
                 - }
   - }
 
-div.desktop-show
+div.pp-desktop-show
   section#collected
     div.clearfix
       each option in pageOptions
@@ -169,7 +169,7 @@ div.desktop-show
         if count % 3 == 0
           div.module-row.clearfix
 
-div.mobile-show
+div.pp-mobile-show
   section#collected.clearfix
     div.clearfix
       each option in pageOptions
