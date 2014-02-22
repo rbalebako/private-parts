@@ -7,6 +7,9 @@ Privacy policies are broken. Most are so obfuscated in legalese that only a trai
 In a world where privacy is more important than ever, Private Parts is an easy to use tool that helps you create a beautiful, responsive, and clear privacy policy for your business that your customers can actually understand. 
 The best part? We've designed Private Parts to make the process as painless as possible. If you already have your content ready, you should be up and running in less than 5 minutes.
 
+Check out an example of the finished product at
+<a href="https://www.lookout.com/legal/privacy" target="_blank">https://www.lookout.com/legal/privacy</a>
+
 ### What you'll need
 
 You'll need a combination of legal and technical skillsets to take full advantage of the project, but the project has been designed to be as plug-and-play as possible, and even junior developers should have no problems getting things running.
