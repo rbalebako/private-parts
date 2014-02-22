@@ -1,0 +1,83 @@
+/* #Base 960 Grid
+================================================== */
+
+.privacy-policy .pp-container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+/* Base Grid */
+.privacy-policy .pp-container .six.columns                     { display: inline-block; width: 340px; margin-left: 1em;}
+.privacy-policy .pp-container .eight.columns                   { display: inline-block; width: 460px; vertical-align: top; margin-left: 0em;}
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .privacy-policy .pp-container                  { width: 768px; }
+
+    .privacy-policy .pp-container .six.columns     { width: 268px; }
+    .privacy-policy .pp-container .eight.columns   { width: 364px; margin-left: 1em;}
+}
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+    .privacy-policy .pp-container { width: 300px; }
+
+    .privacy-policy .pp-container .six.columns,
+    .privacy-policy .pp-container .eight.columns    { width: 300px; margin-left: 0; margin: auto;}
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .privacy-policy .pp-container { width: 420px; }
+
+    .privacy-policy .pp-container .six.columns,
+    .privacy-policy .pp-container .eight.columns   { width: 420px; margin-left: 0; margin: auto;}
+}
+
+
+/* #Clearing
+================================================== */
+
+/* Self Clearing Goodness */
+.pp-container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* Use clearfix class on parent to clear nested columns,
+or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

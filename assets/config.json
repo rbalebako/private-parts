@@ -1,0 +1,120 @@
+{
+  "pageOptions": [
+    {
+      "headerImage": "http://placehold.it/250x250"
+    , "headline": "Short Form Privacy Policy"
+    , "subHeading": "A statement about your short form privacy policy. Be sure to include a <a href='#'>link</a> to your long form Privacy Policy."
+    , "footerContent": "This short form privacy policy was built with <a href='http://lookout.github.io/private-parts'>Private Parts</a>."
+    , "collectedSectionHeader": "What do we collect?"
+    , "sharedSectionHeader": "Who do we share with?"
+    }
+  ]
+  , "collected": [
+    {
+      "name": "Contacts"
+    , "emptyText": "We DON'T collect them."
+    , "class": "contacts"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "Biometrics"
+    , "emptyText": "We DON'T collect them."
+    , "class": "biometrics"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "Health"
+    , "emptyText": "We DON'T collect them."
+    , "class": "health"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "Phone / Text Logs"
+    , "emptyText": "We DON'T collect them."
+    , "class": "phone-text-logs"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "Browser History"
+    , "emptyText": "We DON'T collect them."
+    , "class": "browser-history"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "Location"
+    , "emptyText": "We DON'T collect them."
+    , "class": "location"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "Financial Info"
+    , "emptyText": "We DON'T collect them."
+    , "class": "financial-info"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  , {
+      "name": "User Files"
+    , "emptyText": "We DON'T collect them."
+    , "class": "user-files"
+    , "options": ["<p>A statement describing what you collect in this category and why your product needs to collect it. Limit yourself to just a sentence or two.</p>"]
+    }
+  ]
+  , "shared": [
+    {
+      "name": "Carriers"
+    , "description": "Companies that provide mobile connections."
+    , "emptyText": "We DON'T share with them."
+    , "class": "carriers"
+    , "options": ["A statement describing what user data you share with this group and why you might share that. Limit yourself to just a sentence or two."]
+    }
+  , {
+      "name": "Government"
+    , "description": "Sharing with the government, except where required by law or expressly permitted in an emergency."
+    , "emptyText": "We DON'T share with them unless the law says we have to."
+    , "class": "government"
+    , "options": ["A statement describing what user data you share with this group and why you might share that. Limit yourself to just a sentence or two."]
+    }
+  , {
+      "name": "Data Resellers"
+    , "description": "Companies that sell your info to other companies for multiple purposes, including offering you relevant products."
+    , "emptyText": "We DON'T share your information with them."
+    , "class": "data-resellers"
+    , "options": []
+    }
+  , {
+      "name": "Data Analytics"
+    , "description": "Companies that collect and analyze your data."
+    , "emptyText": "We DON'T share your information with them."
+    , "class": "data-analytics"
+    , "options": []
+    }
+  , {
+      "name": "Systems & Platforms"
+    , "description": "Software companies that power your device, app stores or companies that provide developers with info about app consumers."
+    , "emptyText": "We DON'T share your information with them."
+    , "class": "systems-platforms"
+    , "options": []
+    }
+  , {
+      "name": "Other Apps"
+    , "description": "Other apps by companies that you may not have a relationship with."
+    , "emptyText": "We DON'T share your information with them."
+    , "class": "other-apps"
+    , "options": []
+    }
+  , {
+      "name": "Social Networks"
+    , "description": "Companies that facilitate relationships and sharing between people with common interests."
+    , "emptyText": "We DON'T share your information with them."
+    , "class": "social-networks"
+    , "options": []
+    }
+  , {
+      "name": "Ad Networks"
+    , "description": "Companies that display ads to you through apps."
+    , "emptyText": "We DON'T share your information with them."
+    , "class": "ad-networks"
+    , "options": []
+    }
+  ]
+}
