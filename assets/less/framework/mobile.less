@@ -1,17 +1,16 @@
-// @media screen and (max-width: 768px) {
 @media screen and (max-width: 48em) {
   /**
   *
   * General
   *
   **/
-  span.triangle {
+  span.pp-triangle {
     display: none;
   }
-  div.mobile-show {
+  div.pp-mobile-show {
     display: block;
   }
-  div.desktop-show {
+  div.pp-desktop-show {
     display: none;
   }
   /**
@@ -26,9 +25,10 @@
       display: block;
       text-align: center;
       img {
+        margin: auto;
         margin-top: 1em;
         margin-bottom: 1em;
-        display: inline-block;
+        display: block;
       }
     }
     .privacy-policy-intro-copy {
@@ -39,12 +39,10 @@
         margin-top: 0;
       }
       p {
+        margin: auto;
         margin-top: 1em;
         text-align: center;
-      }
-      p {
         max-width: 250px;
-        margin: auto;
       }
     }
   }
@@ -53,10 +51,11 @@
   * Module Styles
   *
   **/
-  h3.module-title.dingbats-misc-rounded-check.desktop-show, h3.module-title.dingbats-misc-rounded-x.desktop-show, h3.module-title.desktop-show {
+  .pp-wrapper {
+  h3.module-title.dingbats-misc-rounded-check.pp-desktop-show, h3.module-title.dingbats-misc-rounded-x.pp-desktop-show, h3.module-title.pp-desktop-show {
     display: none;
   }
-  h3.module-title.mobile-show, h3.module-title.mobile-title.mobile-show {
+  h3.module-title.pp-mobile-show, h3.module-title.mobile-title.pp-mobile-show {
     display: block;
   }
   .dingbats-misc-corner-flag.mobile-share-icon {
@@ -92,37 +91,15 @@
     margin-top: -0.45em;
     color: @background-color;
   }
-  /**
-  *
-  * Collected
-  *
-  **/
-  section#collected {
+}
+
+  section#collected, section#shared {
     padding: 3em 0;
     h2 {
-      font-size: 1.49em;
       font-weight: bold;
+      font-size: 1.49em;
       margin-bottom: 0;
     }
-    h2 ~ p {
-      margin-top: 0.5em;
-      margin-bottom: 0;
-      color: darken(@dark-background-color, 33.5%);
-    }
-    .module {
-      background: @branding-color;
-    }
-    .module-row {
-      margin: auto;
-      padding: 1em 0;
-    }
-    .icon {
-      display: block;
-      font-size: 3em;
-      color: @background-color;
-    }
-  }
-  section#collected {
     & > div {
       display: block;
       max-width: 100%;
@@ -135,19 +112,10 @@
       display: inline-block;
       margin: 0 auto;
       width: 90%;
+      max-width: 61.25em;
       padding: 1em 0;
       border-top: none;
       text-align: center;
-    }
-    .module {
-      // float: left;
-      // width: 22.5%;
-      // height: 100%;
-      // min-height: 4.4em;
-      // margin:1.05% 1%;
-      // padding: 1em 5% 0.5em 5%;
-      // text-align: center;
-      // box-shadow: 0 0.15em 0 darken(@branding-color, 15%);
     }
     .module {
       float: left;
@@ -155,34 +123,56 @@
       min-width: 8.5em;
       max-width: 30em;
       height: 100%;
-      min-height: 5.3em;
-      max-height: 5.3em;
+      min-height: @module-height;
+      max-height: @module-height;
       margin:1.05% 1%;
       padding: 1em 0;
       text-align: center;
-      box-shadow: 0 0.15em 0 darken(@branding-color, 15%);
     }
     .module-icon {
       cursor: pointer;
       margin-bottom: 1em;
-      // margin-top: 5%;
       margin-top: 1em;
+      .pp-icon {
+        display: block;
+        font-size: 3em;
+      }
     }
-    .icon {
-      display: block;
-      font-size: 2.5em;
-    }
-    .module-title {
-      margin: 0;
-      font-size: 1em;
+    h3.module-title {
       max-width: 80%;
       margin: 0 auto;
-    }
-    h3 {
-      color: @background-color;
+      cursor: pointer;
+      font-size: 1em;
       line-height: 1em;
     }
-   .module-definition, .module-options-list {
+    .module-options-list {
+      display: none;
+    }
+  }
+  /**
+  *
+  * Collected
+  *
+  **/
+  section#collected {
+    h2 ~ p {
+      margin-top: 0.5em;
+      margin-bottom: 0;
+      color: darken(@dark-background-color, 33.5%);
+    }
+    .module {
+      background: @branding-color;
+      box-shadow: 0 0.15em 0 darken(@branding-color, 15%);
+    }
+    .module-icon {
+      .pp-icon {
+        color: @background-color;
+      }
+    }
+    h3.module-title {
+      color: @background-color;
+    }
+   .module-definition {
       display: none;
     }
   }
@@ -192,11 +182,12 @@
   *
   **/
   section#shared {
-    padding: 3em 0;
-    h2 {
-      font-weight: bold;
-      font-size: 1.49em;
-      margin-bottom: 0;
+    .module {
+      background: @dark-background-color;
+      box-shadow: 0 0.15em 0 darken(@dark-background-color, 10%);
+    }
+    h3.module-title {
+      color: darken(@dark-background-color, 40%);
     }
     .share {
       .module.sharedCategory {
@@ -206,88 +197,10 @@
         h3.module-title {
           color: @background-color;
         }
-        .icon {
+        .pp-icon {
           color: @background-color;
         }
       }
-    }
-    .module-row {
-      display: inline-block;
-      margin: auto;
-      width: 90%;
-      max-width: 61.25em;
-      padding: 1em 0;
-      text-align: center;
-      border-top: 0.0625em solid darken(@dark-background-color, 10%);
-    }
-    .module-title {
-      cursor: pointer;
-      color: darken(@dark-background-color, 20%);
-    }
-   .module-icon {
-      cursor: pointer;
-      margin-bottom: 1em;
-    }
-    .icon {
-      display: block;
-      font-size: 3em;
-      color: darken(@dark-background-color, 20%);
-    }
-  }
-  section#shared {
-    & > div {
-      display: block;
-      max-width: 100%;
-      clear: both;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-    }
-    .module-row {
-      display: inline-block;
-      margin: 0 auto;
-      width: 90%;
-      padding: 1em 0;
-      text-align: center;
-      border-top: none;
-    }
-    .module {
-      background: @dark-background-color;
-      float: left;
-      width: 31%;
-      min-width: 8.5em;
-      max-width: 30em;
-      height: 100%;
-      min-height: 5.3em;
-      max-height: 5.3em;
-      margin:1.05% 1%;
-      padding: 1em 0;
-      text-align: center;
-      box-shadow: 0 0.15em 0 darken(@dark-background-color, 10%);
-    }
-    .module-icon {
-      cursor: pointer;
-      // margin-top: 5%;
-      margin-top: .8em;
-    }
-    .icon {
-      display: block;
-      font-size: 2.5em;
-      color: darken(@dark-background-color, 40%);
-    }
-    .module-title {
-      margin: 0;
-      max-width: 80%;
-      margin: 0 auto;
-      color: darken(@dark-background-color, 40%);
-    }
-    h3 {
-      color: darken(@dark-background-color, 10%);
-      font-size: 1em;
-      line-height: 1em;
-    }
-    .module-options-list {
-      display: none;
     }
   }
   /**
@@ -308,22 +221,22 @@
     z-index: 5000;
     background: @background-color;
     overflow: scroll;
-    animation: hide-detail 0.5s ease-out;
-    .active {
+    animation: pp-hide-detail 0.5s ease-out;
+    .pp-active {
       background: darken(@dark-background-color, 10%);
     }
     .module-header {
       position: relative;
+      text-align: left;
       top: 0;
       width: 100%;
       max-height: 12.5em;
       padding: 1em 0 2em 0;
       background: @dark-background-color;
     }
-    .info-button {
+    .pp-info-button {
       float: left;
       margin-top: 4%;
-      margin-left: 4%;
       margin-left: 0.5em;
       margin-right: 0.5em;
       font-size: 2em;
@@ -333,23 +246,18 @@
       border-radius: 0.325em;
       background: darken(@dark-background-color, 10%);
       box-shadow: 0 0.15em 0 darken(@dark-background-color, 20%);
-      &.active-info-button {
+      &.pp-active-info-button {
         background: darken(@dark-background-color, 20%);
         box-shadow: 0 0.15em 0 darken(@dark-background-color, 10%);
       }
     }
-    .info-button-spacer {
+    .pp-info-button-spacer {
       display: none;
-    }
-    h3.module-title {
-      text-align: left;
-      width: 60%;
     }
     .module-definition {
       text-align: left;
       max-width: 70%;
       margin: auto;
-      margin-left: 20%;
       margin-left: 4.5em;
       margin-top: 0.5em;
       color: @background-color;
@@ -364,72 +272,98 @@
       padding-right: 0.5em;
       padding-top: 0.5em;
       color: darken(@dark-background-color, 20%);
+      cursor: pointer;
       &:hover {
         color: darken(@dark-background-color, 30%);
-        cursor: pointer;
       }
     }
-  }
-  .module-options-list {
-    position: relative;
-    top:0;
-    height: auto;
-    max-width: 100%;
-    padding-bottom: 100%;
-    background: @background-color;
-    h4 {
-      text-align: left;
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-    ul {
+    .module-options-list {
       position: relative;
-      max-width: 80%;
-      margin: auto;
-      margin-left: 12%;
-      li {
+      top:0;
+      height: auto;
+      max-width: 100%;
+      padding-bottom: 100%;
+      background: @background-color;
+      h4 {
         text-align: left;
+        margin-top: 1em;
+        margin-bottom: 1em;
       }
-      p {
-        text-align: left;
+      ul {
+        position: relative;
+        max-width: 80%;
+        margin: auto;
+        margin-left: 12%;
+        li {
+          text-align: left;
+        }
+        p {
+          text-align: left;
+        }
+      }
+    }
+    .module-footer-nav {
+      position: fixed;
+      bottom: 0;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      padding-bottom: 1em;
+      background: @dark-background-color;
+      ul {
+        margin: 0;
+        bottom: 0;
+        padding: 0.5em 0;
+        li {
+          margin: 0.85em 1em;
+          margin-bottom: 0;
+          display: inline-block;
+          height: 2.5em;
+          width: 2.5em;
+          border-radius: 100%;
+          text-align: center;
+        }
+        .pp-footer-icon {
+          display: inline-block;
+          font-size: 2em;
+          cursor: pointer;
+          line-height: 1.3;
+          text-align: center;
+        }
       }
     }
   }
-  .module-footer-nav {
-    position: fixed;
-    bottom: 0;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-    padding-bottom: 1em;
-    background: @dark-background-color;
-    ul {
-      margin: 0;
-      bottom: 0;
-      padding: 0.5em 0;
-      li {
-        margin: 0.85em 1em;
-        margin-bottom: 0;
-        display: inline-block;
-        height: 2.5em;
-        width: 2.5em;
-        border-radius: 100%;
-        text-align: center;
+  #collected, #shared {
+    .mobileModule {
+      .module-header {
+        h3.module-title {
+          font-size: 1.8em;
+          display: inline-block;
+          left: 0;
+          margin: 0;
+          margin-top: 6%;
+        }
       }
-      .icon {
-        display: inline-block;
-        font-size: 2em;
-        cursor: pointer;
-        line-height: 1.3;
-        text-align: center;
+      .module-footer-nav {
+        ul {
+          li {
+            &.pp-active {
+              .pp-footer-icon {
+                color: @background-color;
+              }
+            }
+          }
+          .pp-footer-icon {
+            color: darken(@dark-background-color, 20%);
+          }
+        }
       }
     }
   }
   #collected {
     .mobileModule {
       .module-header {
-        text-align: left;
         background: @branding-color;
         div.module-close {
           color: darken(@branding-color, 20%);
@@ -438,11 +372,6 @@
           }
         }
         h3.module-title {
-          font-size: 1.8em;
-          display: inline-block;
-          left: 0;
-          margin: 0;
-          margin-top: 6%;
           margin-left: 12%;
           color: @background-color;
         }
@@ -452,44 +381,6 @@
         h4 {
           color: @branding-color;
           font-weight: bold;
-        }
-      }
-      .module-footer-nav {
-        position: fixed;
-        bottom: 0;
-        margin: 0 auto;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        padding-bottom: 1em;
-        background: @dark-background-color;
-        ul {
-          margin: 0;
-          bottom: 0;
-          padding: 0.5em 0;
-          li {
-            margin: 0.85em 1em;
-            margin-bottom: 0;
-            display: inline-block;
-            height: 2.5em;
-            width: 2.5em;
-            border-radius: 100%;
-            text-align: center;
-            &.active {
-              background: darken(@dark-background-color, 20%);;
-              .icon {
-                color: @background-color;
-              }
-            }
-          }
-          .icon {
-            display: inline-block;
-            font-size: 2em;
-            cursor: pointer;
-            line-height: 1.3;
-            text-align: center;
-            color: darken(@dark-background-color, 20%);
-          }
         }
       }
     }
@@ -514,11 +405,11 @@
                 color: darken(@branding-color, 30%);
               }
             }
-            .info-button {
+            .pp-info-button {
               color: @background-color;
               background: darken(@branding-color, 10%);
               box-shadow: 0 0.15em 0 darken(@branding-color, 20%);
-              &.active-info-button {
+              &.pp-active-info-button {
                 box-shadow: 0 0.15em 0 darken(@branding-color, 10%);
                 background: darken(@branding-color, 20%);
               }
@@ -527,23 +418,20 @@
           .module-footer-nav {
             ul {
               li {
-                &.active {
+                &.pp-active {
                   background: darken(@dark-background-color, 60%);
+                  .pp-footer-icon {
+                    &.shared {
+                     color: @dark-background-color;
+                    }
+                  }
                 }
               }
             }
           }
         }
         .module-header {
-          text-align: left;
           background: @dark-background-color;
-        }
-        h3.module-title {
-          font-size: 2em;
-          display: inline-block;
-          left: 0;
-          margin: 0;
-          margin-top: 6%;
         }
         .module-definition {
           color: @text-color;
@@ -552,46 +440,25 @@
           display: block;
           padding-top: 3em;
           h4 {
-            color: darken(@dark-background-color, 40%);
             display: none;
           }
         }
         .module-footer-nav {
-          position: fixed;
-          bottom: 0;
-          margin: 0 auto;
-          width: 100%;
-          text-align: center;
-          padding: 0;
-          padding-bottom: 1em;
-          background: @dark-background-color;
           ul {
-            margin: 0;
-            bottom: 0;
-            padding: 0.5em 0;
             li {
-              margin: 0.85em 1em;
-              margin-bottom: 0;
-              display: inline-block;
-              height: 2.5em;
-              width: 2.5em;
-              border-radius: 100%;
-              text-align: center;
-              &.active {
-                .icon {
-                  color: @background-color;
+              &.pp-active {
+                .pp-footer-icon {
+                  &.shared {
+                   color: @background-color;
+                  }
                 }
               }
             }
-            .icon {
-              display: inline-block;
-              font-size: 2em;
-              cursor: pointer;
-              line-height: 1.3;
-              text-align: center;
-              color: darken(@dark-background-color, 20%);
-              &.shared {
-               color: darken(@dark-background-color, 60%);
+            li {
+              .pp-footer-icon {
+                &.shared {
+                 color: darken(@dark-background-color, 60%);
+                }
               }
             }
           }
@@ -611,70 +478,20 @@
     }
   }
 }
-.show-detail {
-  display: block;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  background: @background-color;
-  z-index: 1000;
-  animation: show-detail 0.25s ease-in;
-}
-.show-detail-nav {
-  display: block;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  background: @background-color;
-  z-index: 5000;
-  animation: show-detail;
-}
-.hide-detail {
-  display: block;
-  z-index:-1000;
-  opacity: 0;
-}
-.module-definition.hide-this {
-  display: none;
-}
-.hide-detail-show {
-  display: block;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  background: @background-color;
-  z-index: 1000;
-  animation: show-detail 0.3s ease-out reverse;
-}
-
 
 @media all and (max-width: 30.1875em) {
-  section#shared {
+  section#collected, section#shared {
     .module {
-      background: @dark-background-color;
       float: left;
       width: 45%;
       min-width: 8em;
       max-width: 30em;
       height: 100%;
-      min-height: 5.3em;
-      max-height: 5.3em;
+      min-height: @module-height;
+      max-height: @module-height;
       margin:3% 0 0% 3.5%;
       padding: 1em 0;
       text-align: center;
-      box-shadow: 0 0.15em 0 darken(@dark-background-color, 10%);
       .module-title {
         font-size: 1em;
         max-width: 80%;
@@ -682,59 +499,35 @@
       }
     }
   }
-  section#collected {
-    .module {
-      float: left;
-      width: 45%;
-      min-width: 8em;
-      max-width: 30em;
-      height: 100%;
-      min-height: 5.3em;
-      max-height: 5.3em;
-      margin:3% 0 0% 3.5%;
-      padding: 1em 0;
-      text-align: center;
-      box-shadow: 0 0.15em 0 darken(@branding-color, 15%);
-    }
-  }
 }
 
 @media all and (orientation: landscape) and (max-width: 35em) {
-  section#shared {
+  section#shared, section#collected  {
     .module {
-      background: @dark-background-color;
       float: left;
       width: 25%;
-      min-width: 5.3em;
-      max-width: 5.3em;
+      min-width: @module-height;
+      max-width: @module-height;
       height: 100%;
       min-height: 4em;
       max-height: 4em;
       margin:3% 0 0% 3.5%;
       padding: 1em 0;
       text-align: center;
-      box-shadow: 0 0.15em 0 darken(@dark-background-color, 10%);
       .module-title {
         font-size: 0.5em;
       }
     }
   }
+  section#shared {
+    .module {
+      background: @dark-background-color;
+      box-shadow: 0 0.15em 0 darken(@dark-background-color, 10%);
+    }
+  }
   section#collected {
     .module {
-      float: left;
-      width: 25%;
-      min-width: 5.3em;
-      max-width: 5.3em;
-      height: 100%;
-      min-height: 4em;
-      max-height: 4em;
-      margin:3% 0 0% 3.5%;
-      padding: 1em 0;
-      text-align: center;
       box-shadow: 0 0.15em 0 darken(@branding-color, 15%);
-      .module-title {
-        font-size: 0.5em;
-      }
     }
   }
 }
