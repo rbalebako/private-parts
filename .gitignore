@@ -1,6 +1,1 @@
 *.DS_Store
-
-/dist
-/build
-/components
-/node_modules
