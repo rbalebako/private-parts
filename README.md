@@ -1,5 +1,5 @@
 # Private Parts
-#### A visualization framework for privacy policies
+#### A responsive visualization framework for privacy policies
 
 ### Intro
 
